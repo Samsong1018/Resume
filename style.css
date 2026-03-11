@@ -313,6 +313,11 @@ section {
     font-size: 1.5rem;
 }
 
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
 .project-link {
     color: var(--muted);
     text-decoration: none;
@@ -461,6 +466,121 @@ section {
     background: rgba(0, 220, 130, 0.1);
     border: 1px solid rgba(0, 220, 130, 0.4);
     color: #00dc82;
+}
+
+/* ── CURRENTLY LEARNING ── */
+#learning { background: var(--bg); }
+
+.learning-intro {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.learning-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.learning-card:hover {
+    border-color: var(--pink);
+    box-shadow: 0 0 20px var(--pink-glow);
+}
+
+.learning-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.learning-platform {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--pink);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.learning-card h3 {
+    font-size: 0.975rem;
+    font-weight: 700;
+}
+
+.learning-focus-tag {
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.learning-desc {
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    flex: 1;
+}
+
+.progress-wrap {
+    margin-top: auto;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+
+.progress-bar {
+    height: 5px;
+    background: var(--surface2);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pink-dim), var(--pink));
+    border-radius: 999px;
+    transition: width 0.6s ease;
+}
+
+.focus-areas {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+}
+
+.focus-label {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--pink);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.1em;
 }
 
 /* ── CONTACT ── */
