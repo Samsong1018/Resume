@@ -12,6 +12,11 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo">amos@horne:~$</div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -247,8 +252,7 @@
             Practical, browser-based cybersecurity training covering penetration testing, CTF
             challenges, networking, web security, and defensive security techniques.
           </p>
-          <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=7111049" style='border:none;'></iframe>
-          <span class="cert-status in-progress">In Progress</span>
+<span class="cert-status in-progress">In Progress</span>
         </div>
       </div>
 
@@ -364,5 +368,20 @@
     <span>Amos Horne</span> &nbsp;·&nbsp; Built with HTML, CSS &amp; JavaScript &nbsp;·&nbsp; 2026
   </footer>
 
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
