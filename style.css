@@ -340,14 +340,21 @@ section {
 }
 
 /* ── EDUCATION ── */
-#education { background: var(--bg); }
+#education {
+    background: var(--bg);
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
 
 .edu-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 1.75rem;
-    max-width: 640px;
     position: relative;
     overflow: hidden;
 }
@@ -651,11 +658,10 @@ footer span { color: var(--pink); }
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 700px) {
+@media (max-width: 930px) {
     nav {
         padding: 1rem 1.25rem;
         flex-wrap: wrap;
-        position: relative;
     }
 
     .nav-toggle {
@@ -691,6 +697,7 @@ footer span { color: var(--pink); }
     section { padding: 4rem 1.5rem; }
     .hero { padding: 6rem 1.5rem 3rem; }
     .about-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
 }
 
 /* ── PRINT / PDF ── */
