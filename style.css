@@ -475,6 +475,12 @@ section {
     color: #00dc82;
 }
 
+.cert-status.course-complete {
+    background: rgba(100, 160, 255, 0.1);
+    border: 1px solid rgba(100, 160, 255, 0.4);
+    color: #64a0ff;
+}
+
 /* ── CURRENTLY LEARNING ── */
 #learning { background: var(--bg); }
 
@@ -743,6 +749,7 @@ footer span { color: var(--pink); }
     .cert-badge { background: #fde8f0; border-color: #c73869; color: #c73869; }
     .cert-issuer { color: #c73869; }
     .cert-status.in-progress { background: #fff9e0; border-color: #e0b800; color: #8a6d00; }
+    .cert-status.course-complete { background: #e8f0ff; border-color: #5580cc; color: #2a4a99; }
 
     .edu-card::before { background: #c73869; }
     .edu-card .school { color: #c73869; }

@@ -74,11 +74,11 @@
           <h3>// Quick Facts</h3>
           <ul>
             <li>Running Start — dual enrollment (HS + College)</li>
-            <li>Associates degree + HS diploma, 2026</li>
+            <li>Associates degree + HS diploma, Jun 2026</li>
             <li>Self-taught fullstack developer</li>
-            <li>Built and self-hosted a Raspberry Pi server</li>
-            <li>Published two live web projects</li>
-            <li>Targeting a career in cybersecurity</li>
+            <li>Self-hosted VPN, TTS workstation, servers</li>
+            <li>Published live web projects + CLI tools</li>
+            <li>Targeting entry-level cybersecurity roles</li>
           </ul>
         </div>
       </div>
@@ -127,10 +127,24 @@
       <div class="skill-card">
         <h3>Systems & Networking</h3>
         <div class="tag-list">
-          <span class="tag">Linux (Raspberry Pi)</span>
-          <span class="tag">Server Config</span>
-          <span class="tag">Tunneling</span>
+          <span class="tag">Linux (Ubuntu)</span>
+          <span class="tag">WireGuard</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Oracle Cloud</span>
+          <span class="tag">Server Admin</span>
           <span class="tag">Self-hosting</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Security Tools</h3>
+        <div class="tag-list">
+          <span class="tag">nmap</span>
+          <span class="tag">Burp Suite</span>
+          <span class="tag">Gobuster</span>
+          <span class="tag">Metasploit</span>
+          <span class="tag">John the Ripper</span>
+          <span class="tag">Wireshark</span>
         </div>
       </div>
 
@@ -207,6 +221,66 @@
         </div>
       </div>
 
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🔒</span>
+          <span style="font-size:0.8rem; color: var(--pink); font-family: var(--font-mono);">self-hosted</span>
+        </div>
+        <h3>AMvpn — WireGuard VPN</h3>
+        <p>
+          Self-hosted WireGuard VPN server deployed on Oracle Cloud. Replaces commercial
+          VPN services with full infrastructure control — custom tunneling, multi-device
+          support, and network-level configuration managed from the command line.
+        </p>
+        <div class="tag-list">
+          <span class="tag">WireGuard</span>
+          <span class="tag">Oracle Cloud</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Networking</span>
+          <span class="tag">VPN</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">💻</span>
+          <span style="font-size:0.8rem; color: var(--pink); font-family: var(--font-mono);">CLI tool</span>
+        </div>
+        <h3>WTFlag</h3>
+        <p>
+          A shell command explainer that hooks into Claude Code's pre-execution pipeline.
+          Intercepts bash commands and returns plain-English explanations from a locally-indexed
+          tldr-pages SQLite database — no API calls, instant offline lookups.
+        </p>
+        <div class="tag-list">
+          <span class="tag">Node.js</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">CLI</span>
+          <span class="tag">Shell Hooks</span>
+          <span class="tag">tldr-pages</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🤖</span>
+          <span style="font-size:0.8rem; color: var(--pink); font-family: var(--font-mono);">hardware build</span>
+        </div>
+        <h3>Somab — Voice AI Workstation</h3>
+        <p>
+          Dedicated AI workstation built on a ThinkPad for training custom Piper TTS voices
+          using GPU acceleration. Runs local LLM inference via Ollama and synthesizes speech
+          with a custom-trained personal voice model.
+        </p>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">Piper TTS</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">Linux</span>
+          <span class="tag">AI / ML</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -248,9 +322,10 @@
           <p class="cert-issuer">ISC² — International Information System Security Certification Consortium</p>
           <p class="cert-desc">
             Entry-level cybersecurity certification covering security principles, network security,
-            access controls, incident response, and security operations.
+            access controls, incident response, and security operations. All 5 domains complete —
+            sitting the exam soon.
           </p>
-          <span class="cert-status in-progress">In Progress</span>
+          <span class="cert-status course-complete">Course Complete</span>
         </div>
       </div>
 
@@ -261,7 +336,8 @@
           <p class="cert-issuer">TryHackMe — Hands-on Security Labs</p>
           <p class="cert-desc">
             Practical, browser-based cybersecurity training covering penetration testing, CTF
-            challenges, networking, web security, and defensive security techniques.
+            challenges, networking, web security, and defensive security techniques. Pre-Security
+            Path complete.
           </p>
 <span class="cert-status in-progress">In Progress</span>
         </div>
@@ -300,15 +376,15 @@
         </div>
         <p class="learning-desc">
           Foundational cybersecurity training covering how the web works, networking fundamentals,
-          Linux basics, and introductory security concepts through hands-on labs.
+          Linux basics, and introductory security concepts through hands-on labs. Path complete.
         </p>
         <div class="progress-wrap">
           <div class="progress-label">
             <span>Progress</span>
-            <span>50%</span>
+            <span>100%</span>
           </div>
           <div class="progress-bar">
-            <div class="progress-fill" style="width: 50%"></div>
+            <div class="progress-fill" style="width: 100%"></div>
           </div>
         </div>
       </div>
@@ -319,19 +395,20 @@
             <span class="learning-platform">ISC² CC</span>
             <h3>Certified in Cybersecurity</h3>
           </div>
-          <span class="learning-focus-tag">Security Principles</span>
+          <span class="learning-focus-tag">Exam Prep</span>
         </div>
         <p class="learning-desc">
-          Working through the official ISC² self-paced training. Domains 1 (Security Principles),
-          2 (Business Continuity, Disaster Recovery &amp; Incident Response), and 3 (Access Control Concepts) complete.
+          All 5 domains complete via the official ISC² self-paced training: Security Principles,
+          BC/DR &amp; Incident Response, Access Controls, Network Security, and Security Operations.
+          Preparing to sit the exam.
         </p>
         <div class="progress-wrap">
           <div class="progress-label">
             <span>Domains Complete</span>
-            <span>3 / 5</span>
+            <span>5 / 5</span>
           </div>
           <div class="progress-bar">
-            <div class="progress-fill" style="width: 60%"></div>
+            <div class="progress-fill" style="width: 100%"></div>
           </div>
         </div>
       </div>
@@ -344,11 +421,12 @@
       <div class="tag-list">
         <span class="tag">TCP/IP Networking</span>
         <span class="tag">OSI Model</span>
-        <span class="tag">DNS &amp; HTTP</span>
+        <span class="tag">Network Protocols</span>
         <span class="tag">Linux CLI</span>
         <span class="tag">Subnetting</span>
-        <span class="tag">Network Protocols</span>
-        <span class="tag">Wireshark (intro)</span>
+        <span class="tag">Access Controls</span>
+        <span class="tag">Incident Response</span>
+        <span class="tag">ISC² CC Exam Prep</span>
       </div>
     </div>
   </section>
