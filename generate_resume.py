@@ -39,12 +39,14 @@ S_TITLE    = style('title', fontSize=10, textColor=HexColor('#ffb3cc'), leading=
 S_CONTACT  = style('contact', fontSize=7.5, textColor=HexColor('#ddddee'), leading=11)
 S_SECTION  = style('section', fontName='Helvetica-Bold', fontSize=7, textColor=PINK,
                    leading=10, spaceAfter=3, spaceBefore=0)
-S_JOB      = style('job', fontName='Helvetica-Bold', fontSize=9, leading=12, textColor=TEXT)
+S_JOB      = style('job', fontName='Helvetica-Bold', fontSize=8.5, leading=10.5, textColor=TEXT)
 S_SUB      = style('sub', fontSize=8, textColor=PINK, leading=11, fontName='Helvetica-Oblique')
 S_BODY     = style('body', fontSize=8, textColor=MUTED, leading=11.5)
 S_BULLET   = style('bullet', fontSize=8, textColor=MUTED, leading=11.5, leftIndent=8,
                    firstLineIndent=-6)
 S_TAG_WRAP = style('tag_wrap', fontSize=7.5, leading=11, textColor=MUTED)
+S_PROJBODY = style('proj_body', fontSize=7.3, textColor=MUTED, leading=9)
+S_PROJTAG  = style('proj_tag', fontSize=6.8, leading=8.5, textColor=MUTED)
 
 def section_header(title):
     return [
@@ -52,10 +54,10 @@ def section_header(title):
         HRFlowable(width='100%', thickness=0.5, color=PINK, spaceAfter=4),
     ]
 
-def tag_line(tags):
+def tag_line(tags, tag_style=S_TAG_WRAP):
     return Paragraph(
         '  '.join(f'<font color="#888899">[</font><font color="#444466">{t}</font><font color="#888899">]</font>' for t in tags),
-        S_TAG_WRAP
+        tag_style
     )
 
 def divider(space=4):
@@ -115,39 +117,50 @@ left.append(divider(8))
 left += section_header('Projects')
 
 projects = [
+    ('D2D — WebRTC P2P File Sharing',
+     'Cross-device file sharing over WebRTC with an ECDH → AES-GCM encryption pipeline and '
+     'Socket.IO relay fallback for NAT traversal.',
+     ['WebRTC', 'Web Crypto API', 'Next.js', 'Socket.IO']),
+    ('Floret — Period & Cycle Tracker',
+     'Cycle tracking web app with prediction, confidence scoring, and partner mode. Google '
+     'OAuth, PWA, plus a React Native mobile app via Expo.',
+     ['Node.js', 'PostgreSQL', 'Google OAuth', 'React Native']),
+    ('Fracture — Web Pentesting Suite',
+     'Open-source PyQt6 pentesting app: HTTP/HTTPS intercepting proxy, findings tracker with '
+     'CVSS scoring, recon and payload utility belt.',
+     ['Python', 'PyQt6', 'HTTP/HTTPS Proxy', 'CVSS']),
     ('AMvpn — WireGuard VPN',
-     'Self-hosted WireGuard VPN on Oracle Cloud. Replaced commercial VPN with full infrastructure '
-     'control, custom tunneling, and multi-device support managed from the command line.',
+     'Self-hosted WireGuard VPN on Oracle Cloud with full infrastructure control, custom '
+     'tunneling, and multi-device support from the command line.',
      ['WireGuard', 'Oracle Cloud', 'Linux', 'Networking']),
     ('WTFlag',
-     'CLI shell command explainer built as a Claude Code hook integration. Intercepts bash '
-     'commands pre-execution and returns plain-English explanations from a local SQLite-indexed '
-     'tldr-pages database — no API calls, instant offline lookups.',
+     'CLI shell command explainer built as a Claude Code hook. Intercepts bash commands '
+     'pre-execution and explains them from a local SQLite tldr-pages index — no API calls.',
      ['Node.js', 'SQLite', 'CLI', 'Shell Hooks']),
     ('TodoLander',
-     'Fullstack web application with user authentication and personalized data persistence. '
-     'Users register, log in, and manage private todo lists stored in PostgreSQL.',
+     'Fullstack web app with user authentication and personalized data persistence — private '
+     'todo lists stored in PostgreSQL.',
      ['Express.js', 'PostgreSQL', 'Node.js', 'Auth']),
     ('Somab — Voice AI Workstation',
-     'Dedicated ThinkPad AI workstation for training custom Piper TTS voices using GPU '
-     'acceleration. Runs local LLM inference via Ollama with a custom-trained voice model.',
-     ['Python', 'Piper TTS', 'Ollama', 'Linux', 'AI/ML']),
+     'Dedicated ThinkPad AI workstation training custom Piper TTS voices on GPU, running local '
+     'LLM inference via Ollama.',
+     ['Python', 'Piper TTS', 'Ollama', 'AI/ML']),
     ('Bumper the Band',
-     'Frontend website for my band — designed and built from scratch, a real-world client '
-     'project where I was both developer and client.',
+     'Frontend website for my band, designed and built from scratch — developer and client '
+     'in one.',
      ['HTML', 'CSS', 'JavaScript']),
     ('Raspberry Pi Server',
-     'Minecraft server on Raspberry Pi using tunneling over port forwarding — a deliberate '
-     'security decision to avoid home-network attack vectors.',
-     ['Linux', 'Networking', 'Tunneling', 'Raspberry Pi']),
+     'Minecraft server on Raspberry Pi using tunneling over port forwarding to avoid '
+     'home-network attack vectors.',
+     ['Linux', 'Networking', 'Raspberry Pi']),
 ]
 
 for i, (title, desc, tags) in enumerate(projects):
     left.append(Paragraph(title, S_JOB))
-    left.append(Paragraph(desc, S_BODY))
-    left.append(tag_line(tags))
+    left.append(Paragraph(desc, S_PROJBODY))
+    left.append(tag_line(tags, S_PROJTAG))
     if i < len(projects) - 1:
-        left.append(divider(5))
+        left.append(divider(3))
 
 left.append(divider(8))
 
