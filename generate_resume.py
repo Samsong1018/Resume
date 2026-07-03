@@ -149,10 +149,10 @@ projects = [
      'Frontend website for my band, designed and built from scratch — developer and client '
      'in one.',
      ['HTML', 'CSS', 'JavaScript']),
-    ('Raspberry Pi Server',
-     'Minecraft server on Raspberry Pi using tunneling over port forwarding to avoid '
-     'home-network attack vectors.',
-     ['Linux', 'Networking', 'Raspberry Pi']),
+    ('Raspberry Pi — Personal Security Lab',
+     'Self-hosted pentest range: custom Flask vulnerable web apps and SSH privilege-escalation '
+     'challenges, difficulty-tuned and tracked across 8+ labs.',
+     ['Flask', 'SSH', 'Privilege Escalation', 'OWASP Top 10']),
 ]
 
 for i, (title, desc, tags) in enumerate(projects):
