@@ -735,16 +735,24 @@ footer span { color: var(--pink); }
         color: #444;
     }
 
+    .about-text p strong { color: #111; }
+
     .about-highlight { border-color: #ddd; border-left-color: #c73869; background: #f9f9f9; }
     .about-highlight ul { color: #444; }
 
-    .skill-card, .project-card, .cert-card, .edu-card {
+    .skill-card, .project-card, .cert-card, .edu-card, .learning-card {
         border: 1px solid #ddd;
         box-shadow: none;
         background: #f9f9f9;
     }
 
-    .tag { background: #eee; border-color: #ccc; color: #555; }
+    .tag, .learning-focus-tag { background: #eee; border-color: #ccc; color: #555; }
+
+    .learning-intro, .learning-desc, .progress-label { color: #444; }
+    .learning-card h3 { color: #111; }
+    .learning-platform { color: #c73869; }
+    .progress-bar { background: #e5e5e5; }
+    .progress-fill { background: #c73869; }
 
     .cert-badge { background: #fde8f0; border-color: #c73869; color: #c73869; }
     .cert-issuer { color: #c73869; }
